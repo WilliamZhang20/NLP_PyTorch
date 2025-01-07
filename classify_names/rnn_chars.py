@@ -6,7 +6,7 @@ class CharRNN(nn.Module):
         super(CharRNN, self).__init__()
 
         self.rnn = nn.RNN(input_size, hidden_size)
-        self.h2o = nn.Linear(hidden_size) # hidden to output
+        self.h2o = nn.Linear(hidden_size, output_size) # hidden to output
         self.softmax = nn.LogSoftmax(dim=1)
 
     def forward(self, line_tensor):
