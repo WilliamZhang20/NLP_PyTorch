@@ -81,6 +81,10 @@ end = time.time()
 
 print(f"training took {end-start}s")
 
+PATH = './rnn_classif.pth'
+torch.save(rnn.state_dict(), PATH)
+print("Model saved")
+
 import matplotlib
 matplotlib.use('TkAgg')
 import matplotlib.pyplot as plt
